@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -24,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,6 +69,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Angular-Demo\.angular-cli.json" />
+    <Content Include="Angular-Demo\.editorconfig" />
+    <Content Include="Angular-Demo\e2e\tsconfig.e2e.json" />
+    <Content Include="Angular-Demo\package.json" />
+    <Content Include="Angular-Demo\README.md" />
+    <Content Include="Angular-Demo\src\assets\.gitkeep" />
+    <Content Include="Angular-Demo\src\tsconfig.app.json" />
+    <Content Include="Angular-Demo\src\tsconfig.spec.json" />
+    <Content Include="Angular-Demo\tsconfig.json" />
+    <Content Include="Angular-Demo\tslint.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,16 +87,57 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angular-Demo\.gitignore" />
+    <Content Include="Angular-Demo\karma.conf.js" />
+    <Content Include="Angular-Demo\protractor.conf.js" />
+    <Content Include="Angular-Demo\src\app\app.component.css" />
+    <Content Include="Angular-Demo\src\app\app.component.html" />
+    <Content Include="Angular-Demo\src\app\footer\footer.component.css" />
+    <Content Include="Angular-Demo\src\app\footer\footer.component.html" />
+    <Content Include="Angular-Demo\src\app\header\header.component.css" />
+    <Content Include="Angular-Demo\src\app\header\header.component.html" />
+    <Content Include="Angular-Demo\src\app\mainpage\mainpage.component.css" />
+    <Content Include="Angular-Demo\src\app\mainpage\mainpage.component.html" />
+    <Content Include="Angular-Demo\src\app\userlogin\userlogin.component.css" />
+    <Content Include="Angular-Demo\src\app\userlogin\userlogin.component.html" />
+    <Content Include="Angular-Demo\src\favicon.ico" />
+    <Content Include="Angular-Demo\src\index.html" />
+    <Content Include="Angular-Demo\src\styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Angular-Demo\e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="Angular-Demo\e2e\app.po.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\app.component.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\app.module.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\footer\footer.component.spec.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\footer\footer.component.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\header\header.component.spec.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\header\header.component.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\mainpage\mainpage.component.spec.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\mainpage\mainpage.component.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\userlogin\userlogin.component.spec.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\app\userlogin\userlogin.component.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\environments\environment.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\main.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\polyfills.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\test.ts" />
+    <TypeScriptCompile Include="Angular-Demo\src\typings.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
